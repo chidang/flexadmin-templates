@@ -1,0 +1,1 @@
+@@include('flexadmin-templates::common.paginate', ['records' => ${!! $config->modelNames->camelPlural !!}])

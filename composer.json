@@ -1,0 +1,45 @@
+{
+    "name": "techamz/flexadmin-templates",
+    "type": "library",
+    "description": "Flexadmin templates for Techamz Laravel Generator",
+    "keywords": [
+        "laravel",
+        "generator",
+        "flexadmin",
+        "templates",
+        "bootstrap"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Techamz",
+            "email": "chidang.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0",
+        "illuminate/view": "^10.0",
+        "techamz/laravel-generator": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Techamz\\FlexadminTemplates\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\Techamz\\FlexadminTemplates\\FlexadminTemplatesServiceProvider"
+            ]
+        }
+    },
+    "funding": [
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/infyomlabs"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
