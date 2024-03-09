@@ -2,7 +2,7 @@
     <x-slot name="header">
         Update <?php echo $config->modelNames->human; ?>
     </x-slot>
-    <x-input-error />
+    <x-form-errors />
 
     {!! Form::model($resource, ['method' => 'POST', 'route' => ['<?php echo $config->modelNames->snakePlural ;?>.update', $resource->id], 'data-remote' => "true"]) !!}
         @csrf

@@ -2,7 +2,7 @@
     <x-slot name="header">
       <?php echo 'Create New ' . $config->modelNames->human; ?>
     </x-slot>
-    <x-input-error />
+    <x-form-errors />
 
     {!! Form::open(['route' => '<?php echo $config->modelNames->snakePlural ;?>.store', 'method' => 'POST', 'data-remote' => 'true']) !!}
         @csrf

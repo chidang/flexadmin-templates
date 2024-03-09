@@ -7,13 +7,10 @@
 @else
     @{!! Form::label('{{ $fieldName }}', '{{ $fieldTitle }}') !!}
 @endif
-    @{!! Form::text('{{ $fieldName }}', null, ['class' => 'form-control','id'=>'{{ $fieldName }}']) !!}
+            <div class="input-group">
+                @{!! Form::text('{{ $fieldName }}', null, ['class' => 'form-control datepicker','id'=>'{{ $fieldName }}']) !!}
+                <span class="input-group-text"><i class="fal fa-calendar-alt"></i></span>
+            </div>
         </div>
     </div>
 </div>
-
-@@push('page_scripts')
-    <script type="text/javascript">
-        $('#{{ $fieldName }}').datepicker()
-    </script>
-@@endpush
