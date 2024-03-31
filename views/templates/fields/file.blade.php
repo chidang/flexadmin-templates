@@ -2,11 +2,11 @@
 <div class="row">
     <div class="col-12">
         <div class="form-group mb-3">
-            @{{ html()->label('{{ $fieldTitle }}', '{{ $fieldName }}') }}
+            @{{ html()->label('{!! $fieldTitle !!}', '{!! $fieldName !!}') }}
             <div class="input-group">
                 <div class="custom-file">
-                    @{{ html()->email('{{ $fieldName }}') }}
-                    @{{ html()->label('Choose file', '{{ $fieldName }}') }}
+                    @{{ html()->email('{!! $fieldName !!}') }}
+                    @{{ html()->label('Choose file', '{!! $fieldName !!}') }}
                 </div>
             </div>
         </div>
