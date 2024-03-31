@@ -4,7 +4,7 @@
     <x-admin.index-toolbar>
         <x-slot:mainactions>
             <a class="btn btn-highlight waves-effect" data-modal="true" href="{{ route('<?php echo $config->modelNames->snakePlural ;?>.create') }}">
-                <i class="fal fa-plus-circle"></i>
+                <i class="fa fa-plus-circle"></i>
                 <span class="d-none d-md-inline">{{ _('Create New <?php echo $config->modelNames->human; ?>') }}</span>
             </a>
          </x-slot>
