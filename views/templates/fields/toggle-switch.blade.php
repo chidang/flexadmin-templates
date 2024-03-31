@@ -3,16 +3,8 @@
     <div class="col-12">
         <div class="form-group mb-3">
             <div class="custom-control custom-switch">
-                @{!! Form::checkbox('{{ $fieldName }}', 1, null, ['class' => 'custom-control-input']) !!}
-                @if ($config->options->localized)
-                    @{!! Form::label(
-                        '{{ $fieldName }}',
-                        __('models/{{ $config->modelNames->camelPlural }}.fields.{{ $fieldName }}'),
-                        ['class' => 'custom-control-label'],
-                    ) !!}
-                @else
-                    @{!! Form::label('{{ $fieldName }}', '{{ $fieldTitle }}:', ['class' => 'custom-control-label']) !!}
-                @endif
+                @{{ html()->checkbox('{{ $fieldName }}', null, '{{ $checkboxVal }}') }}
+                @{{ html()->label('{{ $fieldTitle }}', '{{ $fieldName }}') }}
             </div>
         </div>
     </div>

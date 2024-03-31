@@ -1,4 +1,4 @@
     
     <label class="form-check">
-        @{!! Form::radio('{{ $fieldName }}', "{{ $value }}", null, ['class' => 'form-check-input']) !!} {{ $label }}
+        @{{ html()->radio('{{ $fieldName }}', null, "{{ $value }}") }} {{ $label }}
     </label>

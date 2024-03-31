@@ -27,5 +27,5 @@
             </div>
         </div>
     </div>
-    {!! $collection->links() !!}
+    {!! $collection->links('pagination::bootstrap-5') !!}
 </x-admin.app-layout>

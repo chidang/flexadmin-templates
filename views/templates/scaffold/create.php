@@ -4,10 +4,10 @@
     </x-slot>
     <x-form-errors />
 
-    {!! Form::open(['route' => '<?php echo $config->modelNames->snakePlural ;?>.store', 'method' => 'POST', 'data-remote' => 'true']) !!}
+    {{ html()->form('POST', route('<?php echo $config->modelNames->snakePlural ;?>.store'))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @include('admin/<?php echo $config->modelNames->snakePlural ;?>/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->form()->close() }}
 
 </x-admin.modal-layout>

@@ -4,12 +4,12 @@
     </x-slot>
     <x-form-errors />
 
-    {!! Form::model($resource, ['method' => 'POST', 'route' => ['<?php echo $config->modelNames->snakePlural ;?>.update', $resource->id], 'data-remote' => "true"]) !!}
+    {{ html()->modelForm($resource, 'POST', route('<?php echo $config->modelNames->snakePlural ;?>.update', $resource->id))->attributes(['data-remote' => 'true'])->open() }}
         @csrf
         @method('PUT')
 
         @include('admin/<?php echo $config->modelNames->snakePlural ;?>/fields')
         @include('admin/share/form_actions')
-    {!! Form::close() !!}
+    {{ html()->form()->close() }}
 
 </x-admin.modal-layout>
