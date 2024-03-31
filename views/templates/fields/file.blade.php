@@ -2,15 +2,11 @@
 <div class="row">
     <div class="col-12">
         <div class="form-group mb-3">
-@if($config->options->localized)
-    @{!! Form::label('{{ $fieldName }}', __('models/{{ $config->modelNames->camelPlural }}.fields.{{ $fieldName }}')) !!}
-@else
-    @{!! Form::label('{{ $fieldName }}', '{{ $fieldTitle }}') !!}
-@endif
+            @{{ html()->label('{{ $fieldTitle }}', '{{ $fieldName }}') }}
             <div class="input-group">
                 <div class="custom-file">
-                    @{!! Form::file('{{ $fieldName }}', ['class' => 'custom-file-input']) !!}
-                    @{!! Form::label('{{ $fieldName }}', 'Choose file', ['class' => 'custom-file-label']) !!}
+                    @{{ html()->email('{{ $fieldName }}') }}
+                    @{{ html()->label('Choose file', '{{ $fieldName }}') }}
                 </div>
             </div>
         </div>

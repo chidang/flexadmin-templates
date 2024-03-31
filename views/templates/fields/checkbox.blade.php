@@ -3,9 +3,9 @@
     <div class="col-12">
         <div class="form-group mb-3">
             <div class="form-check">
-            @{!! Form::hidden('{{ $fieldName }}', 0, ['class' => 'form-check-input']) !!}
-            @{!! Form::checkbox('{{ $fieldName }}', '{{ $checkboxVal }}', null, ['class' => 'form-check-input']) !!}
-            @{!! Form::label('{{ $fieldName }}', '{{ $fieldTitle }}', ['class' => 'form-check-label']) !!}
+                @{{ html()->hidden('{{ $fieldName }}', 0) }}
+                @{{ html()->checkbox('{{ $fieldName }}', null, '{{ $checkboxVal }}') }}
+                @{{ html()->label('{{ $fieldTitle }}', '{{ $fieldName }}') }}
             </div>
         </div>
     </div>
