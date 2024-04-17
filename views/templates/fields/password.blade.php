@@ -3,7 +3,7 @@
     <div class="col-12">
         <div class="form-group mb-3">
             @{{ html()->label('{!! $fieldTitle !!}', '{!! $fieldName !!}') }}
-            @{{ html()->password('{!! $fieldName !!}')->placeholder('{!! $fieldTitle !!}')->class('form-control') }}
+            @{{ html()->password('{!! $fieldName !!}')->class('form-control') }}
         </div>
     </div>
 </div>

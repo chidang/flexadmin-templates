@@ -5,8 +5,7 @@
             @{{ html()->label('{!! $fieldTitle !!}', '{!! $fieldName !!}') }}
             <div class="input-group">
                 <div class="custom-file">
-                    @{{ html()->email('{!! $fieldName !!}') }}
-                    @{{ html()->label('Choose file', '{!! $fieldName !!}') }}
+                    @{{ html()->file('{!! $fieldName !!}') }}
                 </div>
             </div>
         </div>

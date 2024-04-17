@@ -2,11 +2,12 @@
 <div class="row">
     <div class="col-12">
         <div class="form-group mb-3">
-            <div class="form-check">
+            <label class="custom-checkbox">
                 @{{ html()->hidden('{!! $fieldName !!}', 0) }}
                 @{{ html()->checkbox('{!! $fieldName !!}', null, '{!! $checkboxVal !!}') }}
-                @{{ html()->label('{!! $fieldTitle !!}', '{!! $fieldName !!}') }}
-            </div>
+                {!! $fieldTitle !!}
+                <span></span>
+            </label>
         </div>
     </div>
 </div>
